@@ -26,9 +26,13 @@ body {
     font-style: normal;
 }
 
+.burger {
+    display: none;
+}
+
 .wrapper {
     width: 1200px;
-    padding: 0 15px;
+    padding: 0 1em;
     margin: auto;
 }
 
@@ -42,7 +46,6 @@ body {
 .blog-about {
     position: relative;
     width: 100%;
-    min-width: 1200px;
     height: 440px;
     text-transform: uppercase;
     text-align: center;
@@ -129,10 +132,11 @@ body {
 .trend_container {
     margin-top: 30px;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .trend_container-item {
-    width: 25%;
+    width: calc(25% - 5px);
     display: flex;
     margin-right: 5px;
     padding: 20px;
@@ -166,6 +170,7 @@ body {
 
 .trend_container-item:last-child {
     margin-right: 0;
+    width: 25%;
 }
 
 .trend_container-item::after {
@@ -331,6 +336,7 @@ body {
 .shop_container {
     margin-top: 30px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -344,7 +350,6 @@ body {
     text-align: start;
     color: #000000;
     background-repeat: no-repeat;
-    background-size: initial;
     background-position-x: center;
     z-index: 1;
 }
@@ -505,6 +510,10 @@ body {
     width: 100%;
 }
 
+.form_sidebar_search {
+    display: flex;
+    width: 100%;
+}
 .form_field {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -532,10 +541,8 @@ body {
 }
 
 .form_search_button {
-    position: absolute;
     width: 50px;
     height: 50px;
-    left: 223px;
     cursor: pointer;
     color: #ffffff;
     border: none;
@@ -691,6 +698,14 @@ body {
     background-image: url("../images/svg/003-tumblr.svg");
 }
 
+.social_icon_instagram {
+    background-image: url("../images/svg/005-instagram.svg");
+}
+
+.social_icon_facebook {
+    background-image: url("../images/svg/002-facebook-logo.svg");
+}
+
 .social_icon_description {
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
@@ -715,9 +730,11 @@ body {
 }
 
 /*==============POPUP============*/
+._hidden {
+    visibility: hidden;
+}
 
 .popup {
-    /*visibility: hidden;*/
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
@@ -826,6 +843,7 @@ body {
 .popup_radio-group:nth-of-type(n + 2) {
     margin-left: 15px;
 }
+
 .popup_radio:checked ~ .popup_radio-group-text::before {
     background-image: url("../images/svg/form-circle.svg");
 }
