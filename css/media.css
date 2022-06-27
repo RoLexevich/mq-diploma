@@ -33,6 +33,12 @@
 
     .news {
         flex-direction: column;
+        border-bottom: 3px solid #eeeeee;
+        padding-bottom: 20px;
+    }
+
+    .news_image {
+        margin-right: 0px;
     }
 
     .news_image img {
@@ -64,17 +70,6 @@
 
     .popup_form {
         width: 64%;
-        height: 37em;
-        position: absolute;
-        top: 3%;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        transform: translate(0%, 0%);
-        margin: 5% 18%;
-        padding: 55px 30px 50px;
-        box-sizing: border-box;
-        background-color: #ffffff;
     }
 
 }
@@ -199,17 +194,6 @@
 
     .popup_form {
         width: 90%;
-        height: 37em;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        transform: translate(5%, 10%);
-        margin: 0;
-        padding: 55px 30px 50px;
-        box-sizing: border-box;
-        background-color: #ffffff;
     }
 
 }

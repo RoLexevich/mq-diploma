@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+li {
+    list-style-type: none;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: normal;
@@ -124,8 +128,9 @@ body {
 .trend_title::after {
     content: "";
     display: block;
-    width: 66px;
-    border: 3px solid #b59f5b;
+    width: 72px;
+    height: 6px;
+    background-color: #b59f5b;
     margin: 14px auto 0 auto;
 }
 
@@ -197,6 +202,10 @@ body {
     flex-wrap: wrap;
 }
 
+.trend_links li {
+    display: flex;
+}
+
 .trend_links a {
     text-decoration: none;
     font-size: 14px;
@@ -209,8 +218,14 @@ body {
     text-decoration: underline;
 }
 
-.trend_container-item-content p {
+.trend_container-item-paragraph {
     margin-top: 18px;
+
+}
+
+.trend_container-item-paragraph a {
+    text-decoration: none;
+    color: inherit;
 
 }
 
@@ -230,6 +245,7 @@ body {
 .news {
     display: flex;
     margin-top: 70px;
+    margin-right: 30px;
 }
 
 .news:first-child {
@@ -366,6 +382,13 @@ body {
     background-image: url(../images/shop-item-desk3.jpg);
 }
 
+.shop_container-item picture {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%);
+}
+
 .shop_container-item:last-child {
     margin-right: 0;
 }
@@ -379,6 +402,8 @@ body {
 .shop_container-item-content {
     padding: 55px 20px 20px 20px;
     min-height: 270px;
+    position: relative;
+    z-index: 3;
     margin-top: 170px;
     border: 3px solid #b59f5b;
 }
@@ -514,6 +539,7 @@ body {
     display: flex;
     width: 100%;
 }
+
 .form_field {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -758,20 +784,20 @@ body {
     margin: 14px auto 0 auto;
 }
 
-.popup_form::before {
-    content: "";
+.close_popup {
     background-image: url(../images/svg/form-x.svg);
     width: 20px;
+    background-color: transparent;
     height: 20px;
     position: absolute;
     top: -27px;
+    border: none;
     right: 0;
 }
 
 .popup_form {
     width: 392px;
-    height: 589px;
-    position: sticky;
+    position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
